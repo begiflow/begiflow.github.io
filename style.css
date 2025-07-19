@@ -22,18 +22,7 @@ body, html {
     cursor: pointer; 
     transition: transform 0.3s ease;
 }
-#logo::before {
-content: '';
-position: absolute;
-top: -15px;
-right: -15px;
-bottom: -15px;
-left: -15px;
-background: linear-gradient(45deg, transparent, #007bff, transparent, #28a745, transparent, #dc3545, transparent);
-border-radius: 50%;
-z-index: -1; 
-background-size: 200% 200%;
-}
+
 @keyframes rotateBorder {
     0% {
         background-position: 0% 0%;
@@ -43,9 +32,27 @@ background-size: 200% 200%;
     }
 }
 
+#logo::before {
+    content: '';
+    position: absolute;
+    top: -15px;
+    right: -15px;
+    bottom: -15px;
+    left: -15px;
+    background: linear-gradient(45deg, transparent, #007bff, transparent, #28a745, transparent, #dc3545, transparent);
+    border-radius: 50%;
+    z-index: -1; 
+    background-size: 200% 200%;
+    animation: rotateBorder 3s linear infinite;
+    animation-play-state: paused;
+
+}
+
 #logo:hover {
     transform: scale(1.2); 
-    animation: rotateBorder 3s linear infinite;
+}
+#logo:hover::before {
+    animation-play-state: running;
 }
 
     /* --- Blink animation --- */
