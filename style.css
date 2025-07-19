@@ -15,14 +15,36 @@ body, html {
 #logo {
     width: 200px;
     height: 200px;
-    border-radius: 50%;
+    border: none;
+    position: relative; 
     object-fit: cover;
     cursor: pointer; 
     transition: transform 0.3s ease;
 }
+#logo::before {
+content: '';
+position: absolute;
+top: -5px;
+right: -5px;
+bottom: -5px;
+left: -5px;
+background: linear-gradient(45deg, transparent, #007bff, transparent, #28a745, transparent, #dc3545, transparent);
+border-radius: 50%;
+z-index: -1; 
+background-size: 200% 200%;
+animation: rotateBorder 3s linear infinite;
+}
+@keyframes rotateBorder {
+    0% {
+        background-position: 0% 0%;
+    }
+    100% {
+        background-position: 100% 100%;
+    }
+}
 
 #logo:hover {
-    transform: scale(1.1); 
+    transform: scale(1.2); 
 }
 
     /* --- Blink animation --- */
