@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function updateCountdown() {
-        countdownText.textContent = `${timeLeft}...`;
+        countdownText.textContent = `${timeLeft}`;
         
         clearBlinkClasses();
         if (timeLeft === 3) {
