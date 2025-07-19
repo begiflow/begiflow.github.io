@@ -44,8 +44,6 @@ body, html {
     z-index: -1; 
     background-size: 200% 200%;
     animation: rotateBorder 3s linear infinite;
-    animation-play-state: paused;
-
 }
 
 #logo:hover {
