@@ -33,7 +33,6 @@ background: linear-gradient(45deg, transparent, #007bff, transparent, #28a745, t
 border-radius: 50%;
 z-index: -1; 
 background-size: 200% 200%;
-animation: rotateBorder 3s linear infinite;
 }
 @keyframes rotateBorder {
     0% {
@@ -46,6 +45,7 @@ animation: rotateBorder 3s linear infinite;
 
 #logo:hover {
     transform: scale(1.2); 
+    animation: rotateBorder 3s linear infinite;
 }
 
     /* --- Blink animation --- */
