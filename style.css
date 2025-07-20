@@ -17,26 +17,8 @@ body, html {
     height: 200px;
     border-radius: 50%;
     object-fit: cover;
-    cursor: pointer;     
-    border: 15px solid transparent; 
-    border-image: conic-gradient(from var(--angle), #007bff, #28a745, #dc3545, #007bff) 1;
-    overflow: hidden;
-    animation: rotateBorder 3s linear infinite;
-    background-color: #0a2a38; 
     transition: transform 0.3s ease;
     cursor: pointer;
-}
-
-@property --angle {
-  syntax: '<angle>';
-  initial-value: 0deg;
-  inherits: false;
-}
-
-@keyframes rotateBorder {
-  to {
-    --angle: 360deg;
-  }
 }
 
 #logo:hover {
