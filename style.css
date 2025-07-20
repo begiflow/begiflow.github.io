@@ -16,43 +16,30 @@ body, html {
     width: 200px;
     height: 200px;
     border-radius: 50%;
-    border: none;
-    position: relative; 
     object-fit: cover;
-    cursor: pointer; 
+    cursor: pointer;     
+    border: 15px solid transparent; 
+    border-image: conic-gradient(from var(--angle), #007bff, #28a745, #dc3545, #007bff) 1;
+    animation: rotateBorder 3s linear infinite;
+    background-color: #0a2a38; 
     transition: transform 0.3s ease;
-    isolation: isolate; 
+    cursor: pointer;
+}
 
+@property --angle {
+  syntax: '<angle>';
+  initial-value: 0deg;
+  inherits: false;
 }
 
 @keyframes rotateBorder {
-    0% {
-        background-position: 0% 0%;
-    }
-    100% {
-        background-position: 100% 100%;
-    }
-}
-
-#logo::before {
-    content: '';
-    position: absolute;
-    top: -15px;
-    right: -15px;
-    bottom: -15px;
-    left: -15px;
-    background: linear-gradient(45deg, transparent, #007bff, transparent, #28a745, transparent, #dc3545, transparent);
-    border-radius: 50%;
-    z-index: -1; 
-    background-size: 200% 200%;
-    animation: rotateBorder 3s linear infinite;
+  to {
+    --angle: 360deg;
+  }
 }
 
 #logo:hover {
-    transform: scale(1.2); 
-}
-#logo:hover::before {
-    animation-play-state: running;
+    transform: scale(1.1); 
 }
 
     /* --- Blink animation --- */
