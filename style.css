@@ -21,6 +21,8 @@ body, html {
     object-fit: cover;
     cursor: pointer; 
     transition: transform 0.3s ease;
+    isolation: isolate; 
+
 }
 
 @keyframes rotateBorder {
