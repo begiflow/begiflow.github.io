@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function updateCountdown() {
-        countdownText.textContent = timeLeft === 0 ? 'Go' : timeLeft;        
+        countdownText.textContent = timeLeft === 0 ? 'Go' : 'Woof';        
         clearBlinkClasses();
         if (timeLeft === 3) {
             countdownText.classList.add('blink-step-1');
